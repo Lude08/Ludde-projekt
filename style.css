@@ -157,3 +157,56 @@ body {
   }
 }
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at center, #1a1a2e, #0f0f1a 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Wrapper som centrerar allt */
+.center-wrapper {
+  text-align: center;
+  animation: fadeIn 1.2s ease-out;
+}
+
+/* Själva bilden */
+.hero-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 20px;
+  box-shadow:
+    0 0 25px rgba(168, 85, 247, 0.6),
+    0 0 60px rgba(59, 130, 246, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover-effekt för extra gaming-känsla */
+.hero-image:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 0 40px rgba(168, 85, 247, 0.9),
+    0 0 100px rgba(59, 130, 246, 0.7);
+}
+
+/* Liten fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
